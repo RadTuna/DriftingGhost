@@ -1,12 +1,44 @@
+
+if (IsDead)
+{
+    return 0;
+}
+
 key_left = keyboard_check(ord('A'));
 key_right = keyboard_check(ord('D'));
 key_jump = keyboard_check_pressed(ord('W')) || keyboard_check_pressed(vk_space);
+key_dash = keyboard_check(vk_shift);
+key_dashReleased = keyboard_check_released(vk_shift);
 
 var move = key_right - key_left;
 
 hsp = move * walksp;
 
 vsp = vsp + grv;
+
+if (key_dashReleased)
+{
+    dashReleaseCheck = false;
+}
+
+if (key_dash) && (sprit > 0.0) && (!dashReleaseCheck)
+{
+    hsp = hsp * dashHFactor;
+    sprit -= spritDecreaseFactor;
+    if (sprit < 0.5)
+    {
+        sprit = 0.0;
+        dashReleaseCheck = true;
+    }
+}
+else
+{
+    sprit += spritIncreaseFactor;
+    if (sprit > 100.0)
+    {
+        sprit = 100.0;
+    }
+}
 
 if (hsp < 0)
 {
@@ -20,9 +52,13 @@ else
 // (place_meeting(x, y + 1 , O_Block))
 if (key_jump) && (jumpCount < 2)
 { 
-    vsp = -7;
+    vsp = -1 * jumpFactor;
+    if (key_dash)
+    {
+        vsp = -1 * jumpFactor * dashVFactor;
+    }
+
     jumpCount += 1;
- 
 }
 
 if (place_meeting(x + hsp, y, O_Block))

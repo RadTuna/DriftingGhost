@@ -9,25 +9,28 @@
     <sprite>sprites\S_Block</sprite>
     <sprite>sprites\S_Bullet</sprite>
     <sprite>sprites\S_Enemy</sprite>
-    <sprite>sprites\Old_S_Character</sprite>
-    <sprite>sprites\Old_S_CharacterSwap</sprite>
     <sprite>sprites\S_CharacterJump</sprite>
     <sprite>sprites\S_CharacterMove</sprite>
     <sprite>sprites\S_Character</sprite>
+    <sprite>sprites\S_Live</sprite>
+    <sprite>sprites\S_SpritBar</sprite>
+    <sprite>sprites\S_MagEmpty</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\B_Warmind</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\Old_Character_KeyPress.gml</script>
-    <script>scripts\Old_Character_KeyRelease.gml</script>
     <script>scripts\Character_Create.gml</script>
-    <script>scripts\Old_Character_Collision.gml</script>
-    <script>scripts\Old_Character_Step.gml</script>
     <script>scripts\SpawnManager_Alarm0.gml</script>
     <script>scripts\Character_Movement.gml</script>
     <script>scripts\Character_Shoot.gml</script>
+    <script>scripts\Character_UI.gml</script>
+    <script>scripts\Character_Hit.gml</script>
+    <script>scripts\GameMode_Create.gml</script>
+    <script>scripts\GameMode_Tick.gml</script>
+    <script>scripts\Enemy_Create.gml</script>
+    <script>scripts\Enemy_Hit.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\O_Character</object>
@@ -35,6 +38,7 @@
     <object>objects\O_Enemy</object>
     <object>objects\O_SpawnManager</object>
     <object>objects\O_Bullet</object>
+    <object>objects\GameMode</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TestRoom</room>
