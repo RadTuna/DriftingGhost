@@ -15,9 +15,13 @@
     <sprite>sprites\S_Live</sprite>
     <sprite>sprites\S_SpritBar</sprite>
     <sprite>sprites\S_MagEmpty</sprite>
+    <sprite>sprites\S_Cursor</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\B_Warmind</background>
+    <background>background\B_AceCombat</background>
+    <background>background\B_1Layer</background>
+    <background>background\B_2Layer</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -31,6 +35,10 @@
     <script>scripts\GameMode_Tick.gml</script>
     <script>scripts\Enemy_Create.gml</script>
     <script>scripts\Enemy_Hit.gml</script>
+    <script>scripts\MainMenu_Create.gml</script>
+    <script>scripts\MainMenu_Tick.gml</script>
+    <script>scripts\MainMenu_UI.gml</script>
+    <script>scripts\MainMenu_Alarm.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\O_Character</object>
@@ -39,9 +47,11 @@
     <object>objects\O_SpawnManager</object>
     <object>objects\O_Bullet</object>
     <object>objects\GameMode</object>
+    <object>objects\MainMenu</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\TestRoom</room>
+    <room>rooms\StartMenu</room>
+    <room>rooms\GamePlay</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

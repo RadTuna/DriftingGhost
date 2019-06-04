@@ -8,6 +8,7 @@ jumpCount = 0;
 dashVFactor = 1.2;
 dashHFactor = 2.5;
 jumpFactor = 7;
+global.hsp = hsp; // Ref To GameMode_Tick
 
 // Shooting Property
 bulletSp = 10;

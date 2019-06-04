@@ -13,6 +13,7 @@ key_dashReleased = keyboard_check_released(vk_shift);
 var move = key_right - key_left;
 
 hsp = move * walksp;
+global.hsp = hsp;
 
 vsp = vsp + grv;
 
@@ -38,15 +39,6 @@ else
     {
         sprit = 100.0;
     }
-}
-
-if (hsp < 0)
-{
-    image_xscale = -1;
-}
-else
-{
-    image_xscale = 1;
 }
 
 // (place_meeting(x, y + 1 , O_Block))

@@ -8,6 +8,15 @@ moX = mouse_x;
 moY = mouse_y;
 moBtn = mouse_check_button_pressed(mb_left);
 
+if (x > moX)
+{
+    image_xscale = -1;
+}
+else
+{
+    image_xscale = 1;
+}
+
 if (shootDelay > current_time)
 {
     return 0;
