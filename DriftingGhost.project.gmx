@@ -19,9 +19,10 @@
   </sprites>
   <backgrounds name="background">
     <background>background\B_Warmind</background>
-    <background>background\B_AceCombat</background>
+    <background>background\B_Background</background>
     <background>background\B_1Layer</background>
     <background>background\B_2Layer</background>
+    <background>background\B_3Layer</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">

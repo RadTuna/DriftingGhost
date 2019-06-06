@@ -14,10 +14,12 @@ global.hsp = hsp; // Ref To GameMode_Tick
 bulletSp = 10;
 moX = 0;
 moY = 0;
-shootCoolDownTime = 2000; // milliSecond
+shootCoolDownTime = 1000; // milliSecond
 canShoot = true;
-shootCount = 0;
+MaxMag = 3;
+shootCount = MaxMag;
 IsMagEmpty = false;
+IsReloading = false;
 
 // CharacterState Property
 IsDead = false;

@@ -17,15 +17,15 @@ else
     image_xscale = 1;
 }
 
-if (shootDelay > current_time)
+if (shootDelay <= current_time) && (IsReloading)
 {
-    return 0;
+    shootCount += 1;
+    canShoot = true;
+    IsReloading = false;
 }
 
 IsMagEmpty = false;
-shootDelay = 0;
-canShoot = true;
-if (moBtn)
+if (moBtn) && (canShoot)
 {
     var bulletRef = instance_create(x, y, O_Bullet);
     
@@ -34,15 +34,21 @@ if (moBtn)
         bulletRef.image_angle =  point_direction(x, y, moX, moY);
         bulletRef.direction = point_direction(x, y, moX, moY);
         bulletRef.speed = bulletSp;
-        shootCount += 1;
+        shootCount -= 1;
     }
 }
 
-if (shootCount >= 3)
+if (shootCount < MaxMag) && (!IsReloading)
+{
+    shootDelay = 0;
+    shootDelay = current_time + shootCoolDownTime;
+    IsReloading = true;
+}
+
+if (shootCount <= 0)
 {
     IsMagEmpty = true;
     shootCount = 0;
     canShoot = false;
-    shootDelay = current_time + shootCoolDownTime;
 }
 
