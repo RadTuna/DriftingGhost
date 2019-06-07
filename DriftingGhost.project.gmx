@@ -40,7 +40,6 @@
     <script>scripts\MainMenu_Tick.gml</script>
     <script>scripts\MainMenu_UI.gml</script>
     <script>scripts\MainMenu_Alarm.gml</script>
-    <script>scripts\script14.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\O_Character</object>

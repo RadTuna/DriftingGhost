@@ -11,5 +11,3 @@ if (enemyHP <= 0)
     instance_destroy(self, true);
     global.gameScore += 1;
 }
-
-
