@@ -7,6 +7,12 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\S_Block</sprite>
+    <sprite>sprites\S_BlockLeft</sprite>
+    <sprite>sprites\S_BlockRight</sprite>
+    <sprite>sprites\S_BlockDirtLeft</sprite>
+    <sprite>sprites\S_BlockDirtRight</sprite>
+    <sprite>sprites\S_BlockSmall</sprite>
+    <sprite>sprites\S_Tree</sprite>
     <sprite>sprites\S_Bullet</sprite>
     <sprite>sprites\S_Enemy</sprite>
     <sprite>sprites\S_CharacterJump</sprite>
@@ -16,6 +22,7 @@
     <sprite>sprites\S_SpritBar</sprite>
     <sprite>sprites\S_MagEmpty</sprite>
     <sprite>sprites\S_Cursor</sprite>
+    <sprite>sprites\S_Weed</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\B_Warmind</background>
@@ -44,11 +51,18 @@
   <objects name="objects">
     <object>objects\O_Character</object>
     <object>objects\O_Block</object>
+    <object>objects\O_BlockLeft</object>
+    <object>objects\O_BlockRight</object>
+    <object>objects\O_BlockDirtLeft</object>
+    <object>objects\O_BlockDirtRight</object>
+    <object>objects\O_BlockSmall</object>
+    <object>objects\O_Tree</object>
     <object>objects\O_Enemy</object>
     <object>objects\O_SpawnManager</object>
     <object>objects\O_Bullet</object>
     <object>objects\GameMode</object>
     <object>objects\MainMenu</object>
+    <object>objects\O_Weed</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\StartMenu</room>
