@@ -8,13 +8,16 @@ moX = mouse_x;
 moY = mouse_y;
 moBtn = mouse_check_button_pressed(mb_left);
 
+armRef.image_angle = ((point_direction(x, y, moX, moY) + 90) % 180) - 90;
 if (x > moX)
 {
     image_xscale = -1;
+    armRef.image_xscale = -1;
 }
 else
 {
     image_xscale = 1;
+    armRef.image_xscale = 1;
 }
 
 if (shootDelay <= current_time) && (IsReloading)

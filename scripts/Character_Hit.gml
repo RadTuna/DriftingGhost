@@ -11,17 +11,23 @@ if (hitDelay > current_time)
 }
 
 image_alpha = 1;
+armRef.image_alpha = 1;
+leafRef.image_alpha = 1;
 hitDelay = 0;
 immotal = false;
-if (instance_position(x, y, S_Enemy))
+if (instance_position(x, y, O_Enemy))
 {
     global.gameScore = 0;
     live -= 1;
     image_alpha = 0.5;
+    armRef.image_alpha = 0.5;
+    leafRef.image_alpha = 0.5;
     if (live <= 0)
     {
         live = 0;
         image_alpha = 0;
+        armRef.image_alpha = 0;
+        leafRef.image_alpha = 0;
         IsDead = true;
     }
     immotal = true;

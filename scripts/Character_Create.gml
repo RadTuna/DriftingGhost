@@ -8,7 +8,7 @@ jumpCount = 0;
 dashVFactor = 1.2;
 dashHFactor = 2.5;
 jumpFactor = 7;
-global.hsp = hsp; // Ref To GameMode_Tick
+global.characterRef = self; // Ref To GameMode_Tick
 
 // Shooting Property
 bulletSp = 10;
@@ -24,6 +24,8 @@ IsReloading = false;
 // CharacterState Property
 IsDead = false;
 live = 3;
+liveIndex = 0;
+liveLimit = 30; // Sync GameFrame
 immotal = false;
 hitImmotalTime = 2000; // milliSecond
 sprit = 100.0; // Skill Gauge
@@ -34,3 +36,7 @@ spritIncreaseFactor = 0.8;
 dashReleaseCheck = false;
 hitDelay = 0;
 shootDelay = 0;
+
+// Component Reference
+armRef = instance_create(x, y, O_Arm);
+leafRef = instance_create(x, y, O_Fxxk);

@@ -62,6 +62,15 @@ if (place_meeting(x + hsp, y, O_Block))
     hsp = 0;
 }
 x = x + hsp;
+armRef.x = x;
+if (armRef.image_xscale == -1)
+{
+    leafRef.x = lengthdir_x(12, armRef.image_angle + 180) + x;
+}
+else
+{
+    leafRef.x = lengthdir_x(12, armRef.image_angle) + x;
+}
 
 if (place_meeting(x, y+vsp, O_Block))
 {
@@ -76,6 +85,15 @@ if (place_meeting(x, y+vsp, O_Block))
         vsp = 0;
 }
 y = y + vsp;
+armRef.y = y;
+if (armRef.image_xscale == -1)
+{
+    leafRef.y = lengthdir_y(12, armRef.image_angle + 180) + y + 1;
+}
+else
+{
+    leafRef.y = lengthdir_y(12, armRef.image_angle) + y + 1;
+}
 
 if (!place_meeting(x, y + 1, O_Block))
 {
