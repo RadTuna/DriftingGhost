@@ -26,6 +26,7 @@ if (key_dash) && (sprit > 0.0) && (!dashReleaseCheck)
 {
     hsp = hsp * dashHFactor;
     sprit -= spritDecreaseFactor;
+    immotal = true;
     if (sprit < 0.5)
     {
         sprit = 0.0;
@@ -35,6 +36,7 @@ if (key_dash) && (sprit > 0.0) && (!dashReleaseCheck)
 else
 {
     sprit += spritIncreaseFactor;
+    immotal = false;
     if (sprit > 100.0)
     {
         sprit = 100.0;

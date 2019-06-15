@@ -1,6 +1,6 @@
 
 // GameMode Property
-timeInterval = 60;
+timeInterval = 120;
 startTime = current_time
 endTime = startTime + timeInterval * 1000;
 global.remainingTime = 0;

@@ -14,8 +14,7 @@ image_alpha = 1;
 armRef.image_alpha = 1;
 leafRef.image_alpha = 1;
 hitDelay = 0;
-immotal = false;
-if (instance_position(x, y, O_Enemy))
+if ((instance_position(x, y, O_Enemy)) || (instance_position(x, y, O_EnemyBullet))) && (!immotal)
 {
     global.gameScore = 0;
     live -= 1;

@@ -25,13 +25,15 @@ if (global.characterRef.x >= view_xview[0] - view_hborder[0] + view_wview[0]) &&
 if (directionCheck)
 {
     background_hspeed[1] = 1 * sign(global.characterRef.hsp) * -1;
-    background_hspeed[2] = 2 * sign(global.characterRef.hsp) * -1;
-    background_hspeed[3] = 3 * sign(global.characterRef.hsp) * -1;
+    background_hspeed[2] = 1 * sign(global.characterRef.hsp) * -1;
+    background_hspeed[3] = 2 * sign(global.characterRef.hsp) * -1;
+    background_hspeed[4] = 3 * sign(global.characterRef.hsp) * -1;
 }
 else
 {
     background_hspeed[1] = 0;
     background_hspeed[2] = 0;
     background_hspeed[3] = 0;
+    background_hspeed[4] = 0;
 }
 

@@ -5,9 +5,9 @@ vsp = 0;
 grv = 0.3;
 walksp = 4;
 jumpCount = 0;
-dashVFactor = 1.2;
-dashHFactor = 2.5;
-jumpFactor = 7;
+dashVFactor = 1.5;
+dashHFactor = 2.2;
+jumpFactor = 8;
 global.characterRef = self; // Ref To GameMode_Tick
 
 // Shooting Property

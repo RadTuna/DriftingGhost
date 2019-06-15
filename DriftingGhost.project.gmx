@@ -6,32 +6,57 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\S_Block</sprite>
-    <sprite>sprites\S_BlockLeft</sprite>
-    <sprite>sprites\S_BlockRight</sprite>
-    <sprite>sprites\S_BlockDirtLeft</sprite>
-    <sprite>sprites\S_BlockDirtRight</sprite>
-    <sprite>sprites\S_BlockSmall</sprite>
-    <sprite>sprites\S_Tree</sprite>
-    <sprite>sprites\S_Bullet</sprite>
-    <sprite>sprites\S_Enemy</sprite>
-    <sprite>sprites\S_CharacterJump</sprite>
-    <sprite>sprites\S_CharacterMove</sprite>
-    <sprite>sprites\S_Character</sprite>
-    <sprite>sprites\S_Live</sprite>
-    <sprite>sprites\S_SpritBar</sprite>
-    <sprite>sprites\S_MagEmpty</sprite>
-    <sprite>sprites\S_Cursor</sprite>
-    <sprite>sprites\S_Weed</sprite>
-    <sprite>sprites\S_Arm</sprite>
-    <sprite>sprites\S_Fxxk</sprite>
+    <sprites name="Character">
+      <sprite>sprites\S_Arm</sprite>
+      <sprite>sprites\S_Bullet</sprite>
+      <sprite>sprites\S_Character</sprite>
+      <sprite>sprites\S_CharacterJump</sprite>
+      <sprite>sprites\S_CharacterMove</sprite>
+      <sprite>sprites\S_Fxxk</sprite>
+      <sprite>sprites\S_Helper</sprite>
+    </sprites>
+    <sprites name="Enemy">
+      <sprite>sprites\S_Enemy</sprite>
+      <sprite>sprites\S_EnemyAttack</sprite>
+      <sprite>sprites\S_EnemyBullet</sprite>
+      <sprite>sprites\S_OniBullet</sprite>
+      <sprite>sprites\S_SkyEnemy</sprite>
+      <sprite>sprites\S_SkyEnemyAttack</sprite>
+      <sprite>sprites\S_TenguBullet</sprite>
+    </sprites>
+    <sprites name="Enviroment">
+      <sprite>sprites\S_Block</sprite>
+      <sprite>sprites\S_BlockDirtLeft</sprite>
+      <sprite>sprites\S_BlockDirtRight</sprite>
+      <sprite>sprites\S_BlockLeft</sprite>
+      <sprite>sprites\S_BlockRight</sprite>
+      <sprite>sprites\S_BlockSmall</sprite>
+      <sprite>sprites\S_FireFly</sprite>
+      <sprite>sprites\S_Rock0</sprite>
+      <sprite>sprites\S_Rock1</sprite>
+      <sprite>sprites\S_Rock2</sprite>
+      <sprite>sprites\S_Shrub</sprite>
+      <sprite>sprites\S_Sinsa</sprite>
+      <sprite>sprites\S_Tree0</sprite>
+      <sprite>sprites\S_Tree1</sprite>
+      <sprite>sprites\S_Tree2</sprite>
+      <sprite>sprites\S_Weed0</sprite>
+      <sprite>sprites\S_Weed1</sprite>
+      <sprite>sprites\S_Weed2</sprite>
+    </sprites>
+    <sprites name="UI">
+      <sprite>sprites\S_Cursor</sprite>
+      <sprite>sprites\S_Live</sprite>
+      <sprite>sprites\S_MagEmpty</sprite>
+      <sprite>sprites\S_SpritBar</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\B_Warmind</background>
     <background>background\B_Background</background>
     <background>background\B_1Layer</background>
     <background>background\B_2Layer</background>
     <background>background\B_3Layer</background>
+    <background>background\B_4Layer</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -40,32 +65,64 @@
     <script>scripts\Character_Shoot.gml</script>
     <script>scripts\Character_UI.gml</script>
     <script>scripts\Character_Hit.gml</script>
+    <script>scripts\Character_PlaceHelper.gml</script>
     <script>scripts\GameMode_Create.gml</script>
+    <script>scripts\GameMode_EnemyStates.gml</script>
     <script>scripts\GameMode_Tick.gml</script>
-    <script>scripts\Enemy_Create.gml</script>
-    <script>scripts\Enemy_Hit.gml</script>
     <script>scripts\MainMenu_Create.gml</script>
     <script>scripts\MainMenu_Tick.gml</script>
     <script>scripts\MainMenu_UI.gml</script>
     <script>scripts\MainMenu_Alarm.gml</script>
     <script>scripts\SpawnTimeline_Spawn.gml</script>
+    <script>scripts\Helper_Create.gml</script>
+    <script>scripts\Helper_Tick.gml</script>
+    <script>scripts\Enemy_Create.gml</script>
+    <script>scripts\Enemy_Tick.gml</script>
+    <script>scripts\Enemy_Hit.gml</script>
+    <script>scripts\SkyEnemy_Create.gml</script>
+    <script>scripts\SkyEnemy_Tick.gml</script>
+    <script>scripts\FireFly_Create.gml</script>
+    <script>scripts\FireFly_Tick.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\O_Character</object>
-    <object>objects\O_Arm</object>
-    <object>objects\O_Block</object>
-    <object>objects\O_BlockLeft</object>
-    <object>objects\O_BlockRight</object>
-    <object>objects\O_BlockDirtLeft</object>
-    <object>objects\O_BlockDirtRight</object>
-    <object>objects\O_BlockSmall</object>
-    <object>objects\O_Tree</object>
-    <object>objects\O_Enemy</object>
-    <object>objects\O_Bullet</object>
-    <object>objects\GameMode</object>
-    <object>objects\MainMenu</object>
-    <object>objects\O_Weed</object>
-    <object>objects\O_Fxxk</object>
+    <objects name="Character">
+      <object>objects\O_Arm</object>
+      <object>objects\O_Bullet</object>
+      <object>objects\O_Character</object>
+      <object>objects\O_Fxxk</object>
+      <object>objects\O_Helper</object>
+    </objects>
+    <objects name="Enemy">
+      <object>objects\O_Enemy</object>
+      <object>objects\O_EnemyBullet</object>
+      <object>objects\O_OniBullet</object>
+      <object>objects\O_SkyEnemy</object>
+      <object>objects\O_TenguBullet</object>
+    </objects>
+    <objects name="Enviroment">
+      <object>objects\O_Block</object>
+      <object>objects\O_BlockDirtLeft</object>
+      <object>objects\O_BlockDirtRight</object>
+      <object>objects\O_BlockLeft</object>
+      <object>objects\O_BlockRight</object>
+      <object>objects\O_BlockSmall</object>
+      <object>objects\O_FireFly</object>
+      <object>objects\O_Rock0</object>
+      <object>objects\O_Rock1</object>
+      <object>objects\O_Rock2</object>
+      <object>objects\O_Shrub</object>
+      <object>objects\O_Sinsa</object>
+      <object>objects\O_Tree</object>
+      <object>objects\O_Tree1</object>
+      <object>objects\O_Tree2</object>
+      <object>objects\O_Weed0</object>
+      <object>objects\O_Weed1</object>
+      <object>objects\O_Weed2</object>
+    </objects>
+    <objects name="Misc">
+      <object>objects\GameMode</object>
+      <object>objects\MainMenu</object>
+    </objects>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\SpawnTimeline</timeline>

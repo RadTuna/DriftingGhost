@@ -1,10 +1,6 @@
 
-// Initialize Object
-gravity_direction = 270;
-gravity = 0.3;
-
-motion_set(180, 4);
-
-// Hit Property
-
+// Initialize Property
+states = states.chase;
+sight = 80;
+delay = 0;
 enemyHP = 2;
