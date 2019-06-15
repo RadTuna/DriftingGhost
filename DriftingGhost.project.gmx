@@ -43,6 +43,8 @@
       <sprite>sprites\S_Weed0</sprite>
       <sprite>sprites\S_Weed1</sprite>
       <sprite>sprites\S_Weed2</sprite>
+      <sprite>sprites\S_BackWeed</sprite>
+      <sprite>sprites\S_BlockUnder</sprite>
     </sprites>
     <sprites name="UI">
       <sprite>sprites\S_Cursor</sprite>
@@ -112,12 +114,14 @@
       <object>objects\O_Rock2</object>
       <object>objects\O_Shrub</object>
       <object>objects\O_Sinsa</object>
-      <object>objects\O_Tree</object>
+      <object>objects\O_Tree0</object>
       <object>objects\O_Tree1</object>
       <object>objects\O_Tree2</object>
       <object>objects\O_Weed0</object>
       <object>objects\O_Weed1</object>
       <object>objects\O_Weed2</object>
+      <object>objects\O_BackWeed</object>
+      <object>objects\O_BlockUnder</object>
     </objects>
     <objects name="Misc">
       <object>objects\GameMode</object>

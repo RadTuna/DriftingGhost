@@ -3,7 +3,7 @@
   <spriteName>S_Weed0</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>15</depth>
+  <depth>40</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
