@@ -86,7 +86,6 @@
     <path>paths\P_Yuki</path>
   </paths>
   <scripts name="scripts">
-    <script>scripts\Bullet_Tick.gml</script>
     <script>scripts\Character_Create.gml</script>
     <script>scripts\Character_Hit.gml</script>
     <script>scripts\Character_Movement.gml</script>

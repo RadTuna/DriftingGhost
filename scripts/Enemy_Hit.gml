@@ -1,5 +1,5 @@
 
-enemyHP -= 1;
+enemyHP -= (global.gameScore / 5) + 1;
 
 if (enemyHP == 1)
 {

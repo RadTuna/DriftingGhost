@@ -20,7 +20,9 @@ else
 
 var move = key_right - key_left;
 
-hsp = move * walksp;
+hsp = (move * walksp)
+hsp += hsp * ((global.gameScore + 1) * 0.03);
+
 global.hsp = hsp;
 
 vsp = vsp + grv;
