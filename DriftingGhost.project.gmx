@@ -8,12 +8,16 @@
   <sprites name="sprites">
     <sprites name="Character">
       <sprite>sprites\S_Arm</sprite>
+      <sprite>sprites\S_BackDash</sprite>
       <sprite>sprites\S_Bullet</sprite>
       <sprite>sprites\S_Character</sprite>
       <sprite>sprites\S_CharacterJump</sprite>
       <sprite>sprites\S_CharacterMove</sprite>
+      <sprite>sprites\S_FireEffect</sprite>
+      <sprite>sprites\S_ForwardDash</sprite>
       <sprite>sprites\S_Fxxk</sprite>
       <sprite>sprites\S_Helper</sprite>
+      <sprite>sprites\S_HitEffect</sprite>
     </sprites>
     <sprites name="Enemy">
       <sprite>sprites\S_Enemy</sprite>
@@ -23,34 +27,50 @@
       <sprite>sprites\S_SkyEnemy</sprite>
       <sprite>sprites\S_SkyEnemyAttack</sprite>
       <sprite>sprites\S_TenguBullet</sprite>
+      <sprite>sprites\S_Yuki</sprite>
+      <sprite>sprites\S_YukiAttack</sprite>
+      <sprite>sprites\S_YukiBullet</sprite>
     </sprites>
     <sprites name="Enviroment">
+      <sprite>sprites\S_BackWeed</sprite>
       <sprite>sprites\S_Block</sprite>
       <sprite>sprites\S_BlockDirtLeft</sprite>
       <sprite>sprites\S_BlockDirtRight</sprite>
       <sprite>sprites\S_BlockLeft</sprite>
       <sprite>sprites\S_BlockRight</sprite>
       <sprite>sprites\S_BlockSmall</sprite>
+      <sprite>sprites\S_BlockUnder</sprite>
       <sprite>sprites\S_FireFly</sprite>
+      <sprite>sprites\S_OutBlock</sprite>
       <sprite>sprites\S_Rock0</sprite>
       <sprite>sprites\S_Rock1</sprite>
       <sprite>sprites\S_Rock2</sprite>
       <sprite>sprites\S_Shrub</sprite>
       <sprite>sprites\S_Sinsa</sprite>
+      <sprite>sprites\S_TowerLeftLower</sprite>
+      <sprite>sprites\S_TowerLeftMid</sprite>
+      <sprite>sprites\S_TowerRightLower</sprite>
+      <sprite>sprites\S_TowerRightMid</sprite>
+      <sprite>sprites\S_TowerUpper</sprite>
       <sprite>sprites\S_Tree0</sprite>
       <sprite>sprites\S_Tree1</sprite>
       <sprite>sprites\S_Tree2</sprite>
       <sprite>sprites\S_Weed0</sprite>
       <sprite>sprites\S_Weed1</sprite>
       <sprite>sprites\S_Weed2</sprite>
-      <sprite>sprites\S_BackWeed</sprite>
-      <sprite>sprites\S_BlockUnder</sprite>
     </sprites>
     <sprites name="UI">
       <sprite>sprites\S_Cursor</sprite>
+      <sprite>sprites\S_Fade</sprite>
       <sprite>sprites\S_Live</sprite>
       <sprite>sprites\S_MagEmpty</sprite>
+      <sprite>sprites\S_MainExit</sprite>
+      <sprite>sprites\S_MainStart</sprite>
+      <sprite>sprites\S_MainTitle</sprite>
+      <sprite>sprites\S_SpaceKey</sprite>
       <sprite>sprites\S_SpritBar</sprite>
+      <sprite>sprites\S_SpritBarCover</sprite>
+      <sprite>sprites\S_WKey</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -59,40 +79,56 @@
     <background>background\B_2Layer</background>
     <background>background\B_3Layer</background>
     <background>background\B_4Layer</background>
+    <background>background\B_Main</background>
+    <background>background\B_Credit</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\P_Yuki</path>
+  </paths>
   <scripts name="scripts">
+    <script>scripts\Bullet_Tick.gml</script>
     <script>scripts\Character_Create.gml</script>
+    <script>scripts\Character_Hit.gml</script>
     <script>scripts\Character_Movement.gml</script>
+    <script>scripts\Character_PlaceHelper.gml</script>
     <script>scripts\Character_Shoot.gml</script>
     <script>scripts\Character_UI.gml</script>
-    <script>scripts\Character_Hit.gml</script>
-    <script>scripts\Character_PlaceHelper.gml</script>
+    <script>scripts\Enemy_Create.gml</script>
+    <script>scripts\Enemy_Hit.gml</script>
+    <script>scripts\Enemy_Tick.gml</script>
+    <script>scripts\FadeManager_Create.gml</script>
+    <script>scripts\FadeManager_Tick.gml</script>
+    <script>scripts\FireFly_Create.gml</script>
+    <script>scripts\FireFly_Tick.gml</script>
     <script>scripts\GameMode_Create.gml</script>
     <script>scripts\GameMode_EnemyStates.gml</script>
     <script>scripts\GameMode_Tick.gml</script>
+    <script>scripts\Helper_Create.gml</script>
+    <script>scripts\Helper_Tick.gml</script>
+    <script>scripts\MainMenu_Alarm.gml</script>
     <script>scripts\MainMenu_Create.gml</script>
     <script>scripts\MainMenu_Tick.gml</script>
     <script>scripts\MainMenu_UI.gml</script>
-    <script>scripts\MainMenu_Alarm.gml</script>
-    <script>scripts\SpawnTimeline_Spawn.gml</script>
-    <script>scripts\Helper_Create.gml</script>
-    <script>scripts\Helper_Tick.gml</script>
-    <script>scripts\Enemy_Create.gml</script>
-    <script>scripts\Enemy_Tick.gml</script>
-    <script>scripts\Enemy_Hit.gml</script>
     <script>scripts\SkyEnemy_Create.gml</script>
     <script>scripts\SkyEnemy_Tick.gml</script>
-    <script>scripts\FireFly_Create.gml</script>
-    <script>scripts\FireFly_Tick.gml</script>
+    <script>scripts\SpawnTimeline_Spawn.gml</script>
+    <script>scripts\YukiEnemy_Create.gml</script>
+    <script>scripts\YukiEnemy_PRJRspawn.gml</script>
+    <script>scripts\YukiEnemy_Tick.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\F_Main</font>
+    <font>fonts\F_GamePlay</font>
+  </fonts>
   <objects name="objects">
     <objects name="Character">
       <object>objects\O_Arm</object>
       <object>objects\O_Bullet</object>
       <object>objects\O_Character</object>
+      <object>objects\O_FireEffect</object>
       <object>objects\O_Fxxk</object>
       <object>objects\O_Helper</object>
+      <object>objects\O_HitEffect</object>
     </objects>
     <objects name="Enemy">
       <object>objects\O_Enemy</object>
@@ -100,31 +136,42 @@
       <object>objects\O_OniBullet</object>
       <object>objects\O_SkyEnemy</object>
       <object>objects\O_TenguBullet</object>
+      <object>objects\O_Yuki</object>
+      <object>objects\O_YukiBullet</object>
     </objects>
     <objects name="Enviroment">
+      <object>objects\O_BackWeed</object>
       <object>objects\O_Block</object>
       <object>objects\O_BlockDirtLeft</object>
       <object>objects\O_BlockDirtRight</object>
       <object>objects\O_BlockLeft</object>
       <object>objects\O_BlockRight</object>
       <object>objects\O_BlockSmall</object>
+      <object>objects\O_BlockUnder</object>
       <object>objects\O_FireFly</object>
+      <object>objects\O_OutBlock</object>
       <object>objects\O_Rock0</object>
       <object>objects\O_Rock1</object>
       <object>objects\O_Rock2</object>
       <object>objects\O_Shrub</object>
       <object>objects\O_Sinsa</object>
+      <object>objects\O_ToweLeftLower</object>
+      <object>objects\O_TowerLeftMid</object>
+      <object>objects\O_TowerRightLower</object>
+      <object>objects\O_TowerRightMid</object>
+      <object>objects\O_TowerUpper</object>
       <object>objects\O_Tree0</object>
       <object>objects\O_Tree1</object>
       <object>objects\O_Tree2</object>
       <object>objects\O_Weed0</object>
       <object>objects\O_Weed1</object>
       <object>objects\O_Weed2</object>
-      <object>objects\O_BackWeed</object>
-      <object>objects\O_BlockUnder</object>
     </objects>
     <objects name="Misc">
+      <object>objects\Fade</object>
+      <object>objects\FadeManager</object>
       <object>objects\GameMode</object>
+      <object>objects\MainJumper</object>
       <object>objects\MainMenu</object>
     </objects>
   </objects>
@@ -134,6 +181,7 @@
   <rooms name="rooms">
     <room>rooms\StartMenu</room>
     <room>rooms\GamePlay</room>
+    <room>rooms\Credit</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

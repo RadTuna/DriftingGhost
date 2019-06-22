@@ -6,9 +6,17 @@ if (IsDead)
 
 key_left = keyboard_check(ord('A'));
 key_right = keyboard_check(ord('D'));
-key_jump = keyboard_check_pressed(ord('W')) || keyboard_check_pressed(vk_space);
 key_dash = keyboard_check(vk_shift);
 key_dashReleased = keyboard_check_released(vk_shift);
+if (global.WControl)
+{
+    key_jump = keyboard_check_pressed(ord('W'));
+}
+else
+{
+    key_jump = keyboard_check_pressed(vk_space);
+}
+
 
 var move = key_right - key_left;
 
@@ -97,7 +105,7 @@ else
     leafRef.y = lengthdir_y(12, armRef.image_angle) + y + 1;
 }
 
-if (!place_meeting(x, y + 1, O_Block))
+if (!place_meeting(x, y + 1, O_Block)) && (!key_dash)
 {
     sprite_index = S_CharacterJump;
     image_speed = 0;
@@ -106,13 +114,27 @@ if (!place_meeting(x, y + 1, O_Block))
 else
 {
     image_speed = 1;
-    if(hsp == 0)
+    if (key_dash) && (!dashReleaseCheck)
     {
-        sprite_index = S_Character;
+        if ((hsp > 0) && (x > mouse_x)) || ((hsp < 0) && (x <= mouse_x))
+        {
+             sprite_index = S_BackDash;
+        }
+        else
+        {
+            sprite_index = S_ForwardDash;
+        }
     }
     else
     {
-        sprite_index = S_CharacterMove;
+        if(hsp == 0)
+        {
+            sprite_index = S_Character;
+        }
+        else
+        {
+            sprite_index = S_CharacterMove;
+        }
     }
 }
 

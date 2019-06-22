@@ -36,7 +36,8 @@ switch(states)
                     
         motion_set(dir,0);
             if(delay == 0)
-            {   instance_create(x,y,O_TenguBullet);
+            {   
+                instance_create(x,y,O_TenguBullet);
                 delay = 1;
                 alarm_set(0,45);
             }

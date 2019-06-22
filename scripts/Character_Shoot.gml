@@ -30,6 +30,21 @@ if (shootDelay <= current_time) && (IsReloading)
 IsMagEmpty = false;
 if (moBtn) && (canShoot)
 {
+    if (armRef.image_xscale == -1)
+    {
+        var myX = lengthdir_x(18, armRef.image_angle + 180) + x;
+        var myY = lengthdir_y(18, armRef.image_angle + 180) + y + 1;
+        var inst = instance_create(myX, myY, O_FireEffect);
+        inst.image_angle = point_direction(x, y, moX, moY);
+    }
+    else
+    {
+        var myX = lengthdir_x(18, armRef.image_angle) + x;
+        var myY = lengthdir_y(18, armRef.image_angle) + y + 1;
+        var inst = instance_create(myX, myY, O_FireEffect);
+        inst.image_angle = point_direction(x, y, moX, moY);
+    }
+    
     var bulletRef = instance_create(x, y, O_Bullet);
     
     if (bulletRef)

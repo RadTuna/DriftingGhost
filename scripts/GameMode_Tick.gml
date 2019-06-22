@@ -5,10 +5,36 @@ if (current_time >= endTime)
     IsTimeOver = true;
 }
 
-global.remainingTime = round(timeInterval - ((current_time / 1000) - (startTime / 1000)));
+
+if (global.canNextLevel) && (!nextLevelSet)
+{
+    nextLevelTime = current_time + nextLevelDelay;
+    nextLevelSet = true;
+}
+
+if (nextLevelTime <= current_time) && (global.canNextLevel)
+{
+    room_goto(Credit);
+}
+
+if (nextLevelTime - 1500 <= current_time) && (global.canNextLevel) && (!fadeSet)
+{
+    var inst = instance_create(0, 0, FadeManager);
+    inst.arg0 = false
+    fadeSet = true;
+    global.canDraw = false;
+}
+
+
+if (!global.canNextLevel)
+{
+    global.remainingTime = round(timeInterval - ((current_time / 1000) - (startTime / 1000)));
+}
+
 if (global.remainingTime < 0)
 {
     global.remainingTime = 0;
+    global.canNextLevel = true;
 }
 
 // Background Scroll

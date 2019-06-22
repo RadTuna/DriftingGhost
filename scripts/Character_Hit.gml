@@ -1,5 +1,11 @@
 // Hit Character : Decrease Live
 
+if (live <= 0) && (!global.canNextLevel)
+{
+   // nextLevelTime = current_time + nextLevelDelay;
+    global.canNextLevel = true;
+}
+
 if (IsDead)
 {
     return 0;
@@ -32,3 +38,4 @@ if ((instance_position(x, y, O_Enemy)) || (instance_position(x, y, O_EnemyBullet
     immotal = true;
     hitDelay = current_time + hitImmotalTime;
 }
+

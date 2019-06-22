@@ -1,33 +1,34 @@
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_text_transformed(640, 100, "Drifting Ghost", 4, 4, 0);
+
+draw_set_font(F_Main);
+draw_sprite(S_MainTitle, 0, 640, 130);
+
+//draw_text_colour(520, 115, "Hundred Ghost", c_maroon, c_red, c_red, c_red, 1);
+//draw_text_colour(790, 155, "Night Line", c_red, c_red, c_maroon, c_red, 1);
 
 if (pressedNew)
 {
-    draw_button(AllX1, NewY1, AllX2, NewY2, false); 
-    draw_button(AllX1, ContinueY1, AllX2, ContinueY2, true); 
-    draw_button(AllX1, ExitY1, AllX2, ExitY2, true);
-}
-else if (pressedContinue)
-{
-    draw_button(AllX1, NewY1, AllX2, NewY2, true); 
-    draw_button(AllX1, ContinueY1, AllX2, ContinueY2, false); 
-    draw_button(AllX1, ExitY1, AllX2, ExitY2, true);
+    draw_sprite_ext(S_MainStart, 0, (AllX1 + AllX2) / 2, (NewY1 + NewY2) / 2, 1, 1, 0, c_maroon, 0.8);
+    draw_sprite(S_MainExit, 0, (AllX1 + AllX2) / 2, (ExitY1 + ExitY2) / 2);
 }
 else if (pressedExit)
 {
-    draw_button(AllX1, NewY1, AllX2, NewY2, true); 
-    draw_button(AllX1, ContinueY1, AllX2, ContinueY2, true); 
-    draw_button(AllX1, ExitY1, AllX2, ExitY2, false); 
+    draw_sprite(S_MainStart, 0, (AllX1 + AllX2) / 2, (NewY1 + NewY2) / 2);
+    draw_sprite_ext(S_MainExit, 0, (AllX1 + AllX2) / 2, (ExitY1 + ExitY2) / 2, 1, 1, 0, c_maroon, 0.8);
 }
 else
 {
-    draw_button(AllX1, NewY1, AllX2, NewY2, true); 
-    draw_button(AllX1, ContinueY1, AllX2, ContinueY2, true); 
-    draw_button(AllX1, ExitY1, AllX2, ExitY2, true);
+    draw_sprite(S_MainStart, 0, (AllX1 + AllX2) / 2, (NewY1 + NewY2) / 2);
+    draw_sprite(S_MainExit, 0, (AllX1 + AllX2) / 2, (ExitY1 + ExitY2) / 2);
 }
 
-draw_text_transformed_colour((AllX1 + AllX2) / 2, (NewY1 + NewY2) / 2, "New Game", 2, 2, 0, c_black, c_black, c_black, c_black, 1);
-draw_text_transformed_colour((AllX1 + AllX2) / 2, (ContinueY1 + ContinueY2) / 2, "Continue", 2, 2, 0, c_black, c_black, c_black, c_black, 1);
-draw_text_transformed_colour((AllX1 + AllX2) / 2, (ExitY1 + ExitY2) / 2, "Exit", 2, 2, 0, c_black, c_black, c_black, c_black, 1);
+if (global.WControl)
+{
+    draw_sprite(S_WKey, 0, KeyX, KeyY);
+}
+else
+{
+    draw_sprite(S_SpaceKey, 0, KeyX, KeyY);
+}
 
